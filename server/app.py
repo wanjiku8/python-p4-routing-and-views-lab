@@ -14,8 +14,8 @@ def index():
 @app.route('/print/<string:parameter>')
 def print_string(parameter):
     """Prints the parameter to console and returns it to the browser"""
-    print(parameter)  # This shows in your terminal/command prompt
-    return parameter  # This shows in your web browser
+    print(parameter) 
+    return parameter 
 
 # Route to count numbers
 @app.route('/count/<int:parameter>')
@@ -38,7 +38,7 @@ def math(num1, operation, num2):
     elif operation == '%':
         result = num1 % num2
     else:
-        return "Invalid operation", 400  # Returns 400 Bad Request for invalid ops
+        return "Invalid operation", 400 
     
     return str(result)
 
