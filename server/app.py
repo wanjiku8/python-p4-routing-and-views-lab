@@ -7,20 +7,17 @@ app = Flask(__name__)
 # Route for the home page
 @app.route('/')
 def index():
-    """Home page that displays a heading"""
     return '<h1>Python Operations with Flask Routing and Views</h1>'
 
 # Route to print a string
 @app.route('/print/<string:parameter>')
 def print_string(parameter):
-    """Prints the parameter to console and returns it to the browser"""
     print(parameter) 
     return parameter 
 
 # Route to count numbers
 @app.route('/count/<int:parameter>')
 def count(parameter):
-    """Displays numbers from 0 to parameter-1, each on a new line"""
     numbers = '\n'.join(str(num) for num in range(parameter))
     return numbers
 
